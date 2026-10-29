@@ -158,8 +158,8 @@ const guestList = [
     {
         fullName: "Trần Hồng Phúc",
         displayName: "Gô",
-        role: "anh",
-        hostRole: "iem .....",
+        role: "Anh",
+        hostRole: "iem nhó 😁",
         customAliases: [
             "Hồng Phúc",
             "THP",
