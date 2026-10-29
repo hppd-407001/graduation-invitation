@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+
+    <title>Graduation Invitation - Hiền</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="notranslate" translate="no">
+
+    <!-- =========================
+         TRANG NHẬP THÔNG TIN
+    ========================== -->
+
+    <section id="welcomePage">
+
+        <!-- CONFETTI RƠI TRANG LOGIN -->
+        <div class="login-confetti-layer" aria-hidden="true"></div>
+
+        <!-- FORM -->
+
+        <div class="login-box">
+
+            <p class="welcome-small">
+                GRADUATION INVITATION
+            </p>
+
+            <h1>
+                You're invited 🎓
+            </h1>
+
+            <p class="welcome-description">
+                Nhập tên của bạn để mở lời mời dành riêng cho bạn.
+            </p>
+
+
+            <div class="input-group">
+
+                <label for="nameInput">
+                    Tên của bạn
+                </label>
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <button
+                id="openButton"
+                type="button"
+                onclick="openInvitation()"
+            >
+                Mở thiệp 💌
+            </button>
+
+
+            <p class="hint">
+                Nhập tên đầy đủ hoặc tên thường gọi
+                <br>
+                Đúng hì mở thiệp, sai hì nhập lợi...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HIỆU ỨNG MỞ PHONG BÌ
+    ========================== -->
+
+    <section id="envelopePage">
+
+        <div class="envelope">
+
+            <div class="envelope-back"></div>
+
+
+            <div class="letter">
+                <p>Graduation Invitation</p>
+
+                <strong>
+                    <span id="envelopeGuestRole"></span>
+                    <span id="envelopeGuestName"></span>
+                </strong>
+
+                <span>🎓</span>
+            </div>
+
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-flap"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TRANG THIỆP MỜI
+    ========================== -->
+
+    <section id="invitationPage">
+
+        <!-- =========================
+             TRANG TRÍ THIỆP: BÓNG BAY + MŨ TỐT NGHIỆP
+        ========================== -->
+        <div class="party-decoration" aria-hidden="true">
+
+            <!-- Cụm bóng trái trên -->
+            <span class="party-balloon balloon-blue balloon-tl-a"></span>
+            <span class="party-balloon balloon-gold balloon-tl-b"></span>
+            <span class="party-balloon balloon-light balloon-tl-c"></span>
+
+            <!-- Cụm bóng phải trên -->
+            <span class="party-balloon balloon-gold balloon-tr-a"></span>
+            <span class="party-balloon balloon-blue balloon-tr-b"></span>
+            <span class="party-balloon balloon-light balloon-tr-c"></span>
+
+            <!-- Cụm bóng trái dưới -->
+            <span class="party-balloon balloon-blue balloon-bl-a"></span>
+            <span class="party-balloon balloon-gold balloon-bl-b"></span>
+            <span class="party-balloon balloon-light balloon-bl-c"></span>
+
+            <!-- Cụm bóng phải dưới -->
+            <span class="party-balloon balloon-gold balloon-br-a"></span>
+            <span class="party-balloon balloon-blue balloon-br-b"></span>
+            <span class="party-balloon balloon-light balloon-br-c"></span>
+
+            <!-- Mũ tốt nghiệp -->
+            <img
+                src="images/graduation-cap.svg"
+                class="party-cap party-cap-tl"
+                alt=""
+            >
+
+            <img
+                src="images/graduation-cap.svg"
+                class="party-cap party-cap-tr"
+                alt=""
+            >
+
+            <img
+                src="images/graduation-cap.svg"
+                class="party-cap party-cap-bl"
+                alt=""
+            >
+
+            <img
+                src="images/graduation-cap.svg"
+                class="party-cap party-cap-br"
+                alt=""
+            >
+        </div>
+
+
+        <div class="invitation-container">
+
+
+            <!-- TIÊU ĐỀ KIỂU CALLIGRAPHY -->
+
+            <div class="graduation-heading">
+
+                <p class="graduation-script">
+                    Graduation
+                </p>
+
+                <p class="graduation-serif">
+                    invitation.
+                </p>
+
+            </div>
+
+
+            <!-- CLASS OF 2026 -->
+
+            <p class="sub-title">
+                CLASS OF 2026
+            </p>
+
+
+            <!-- TÊN -->
+
+            <h1 class="graduate-name">
+                Nguyễn Lê Hiền
+            </h1>
+
+
+            <div class="divider"></div>
+
+
+            <!-- LỜI MỜI -->
+
+            <div class="invite-text">
+
+                <p class="invite-sentence">
+
+                    Thân mời
+
+                    <span id="guestRole"></span>
+
+                    <span id="guestName"></span>
+
+                    đến tham dự Lễ tốt nghiệp của
+
+                    <span id="hostRole"></span>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 THÔNG TIN BUỔI LỄ
+            ========================== -->
+
+            <div class="event-info">
+
+
+                <!-- NGÀY -->
+
+                <div class="event-item">
+
+                    <span class="event-icon">
+                        🗓️
+                    </span>
+
+                    <span class="event-text">
+
+                        <span class="event-label">
+                            NGÀY
+                        </span>
+
+                        <strong>
+                            01 / 11 / 2026
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <!-- THỜI GIAN -->
+
+                <div class="event-item">
+
+                    <span class="event-icon">
+                        🕘
+                    </span>
+
+                    <span class="event-text">
+
+                        <span class="event-label">
+                            THỜI GIAN
+                        </span>
+
+                        <strong>
+                            12:30 - 16:30
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <!-- ĐỊA ĐIỂM -->
+
+                <div class="event-item">
+
+                    <span class="event-icon">
+                        📍
+                    </span>
+
+                    <span class="event-text">
+
+                        <span class="event-label">
+                            ĐỊA ĐIỂM
+                        </span>
+
+                        <a
+                            href="https://maps.app.goo.gl/uEo62PGBvwmxcqRr6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="map-link"
+                        >
+                            Học Viện Hàng Không Việt Nam CS2
+                        </a>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LỜI CẢM ƠN -->
+
+            <p class="thank-you">
+                Sự hiện diện của bạn sẽ khiến ngày đặc biệt này trở nên ý nghĩa hơn. 🤍
+            </p>
+
+
+            <p class="signature">
+                — Hiền —
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

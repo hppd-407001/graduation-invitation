@@ -1,0 +1,1175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf4ff;
+    color: #222;
+}
+
+
+/* =========================
+   TRANG NHẬP THÔNG TIN
+========================= */
+
+#welcomePage {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    z-index: 2;
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ẢNH TRANG TRÍ TRANG ĐĂNG NHẬP
+========================= */
+
+.welcome-decoration {
+    position: absolute;
+    z-index: 1;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* Mũ tốt nghiệp */
+
+.decor-cap {
+    width: clamp(100px, 9vw, 145px);
+    opacity: 0.86;
+}
+
+.decor-cap-top {
+    right: 18%;
+    top: 5%;
+
+    transform: rotate(10deg);
+}
+
+.decor-cap-bottom {
+    left: 17%;
+    bottom: 5%;
+
+    transform: rotate(-13deg);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #999;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   TRANG THIỆP
+========================= */
+
+#invitationPage {
+    display: none;
+
+    min-height: 100vh;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    animation: fadeIn 1s ease;
+}
+
+
+/* =========================
+   TIÊU ĐỀ GRADUATION
+========================= */
+
+.graduation-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    line-height: 1;
+}
+
+
+/* Graduation - chữ viết tay */
+
+.graduation-script {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(58px, 8vw, 95px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    color: #222;
+
+    margin: 0;
+
+    transform: rotate(-2deg);
+}
+
+
+/* invitation. - chữ serif */
+
+.graduation-serif {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(36px, 5.2vh, 55px);
+    font-weight: 500;
+    line-height: 0.82;
+    color: #222;
+
+    margin-top: -12px;
+
+    letter-spacing: -1px;
+}
+
+
+/* CLASS OF 2026 */
+
+.sub-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    color: #777;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TÊN NGƯỜI TỐT NGHIỆP
+========================= */
+
+.graduate-name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ĐƯỜNG KẺ
+========================= */
+
+.divider {
+    width: 80px;
+    height: 1px;
+
+    background: #aaa;
+
+    margin: 0 auto 30px;
+}
+
+
+/* =========================
+   LỜI MỜI
+========================= */
+
+.invite-text {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.invite-sentence {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+#guestRole,
+#guestName,
+#hostRole {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   THÔNG TIN BUỔI LỄ
+========================= */
+
+.event-info {
+    margin: 40px auto;
+
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.event-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 14px 0;
+
+    flex-wrap: wrap;
+}
+
+.event-icon {
+    font-size: 20px;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+.event-text {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+.event-label {
+    font-size: 18px;
+
+    color: #222;
+
+    letter-spacing: 0;
+}
+
+.event-text strong {
+    font-size: 18px;
+
+    color: #222;
+}
+
+.map-link {
+    font-size: 18px;
+
+    color: blue;
+
+    text-decoration: underline;
+}
+
+.map-link:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you {
+    margin-top: 40px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+.signature {
+    margin-top: 25px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+
+    color: #555;
+}
+
+
+/* =========================
+   ANIMATION CHUNG
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   HIỆU ỨNG PHONG BÌ
+========================= */
+
+#envelopePage {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 999;
+
+    background: #eaf4ff;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.envelope {
+    position: relative;
+
+    width: 340px;
+    height: 220px;
+
+    perspective: 1000px;
+}
+
+
+/* Mặt sau phong bì */
+
+.envelope-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #d9e8f5;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Tấm thiệp bên trong */
+
+.letter {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+
+    height: 190px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 2;
+
+    transition:
+        transform 1.2s ease,
+        opacity 0.8s ease;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Graduation Invitation trong phong bì */
+
+.letter p {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 34px;
+
+    letter-spacing: 1px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+
+.letter strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+
+/* Danh xưng + tên khách trong phong bì */
+
+#envelopeGuestRole,
+#envelopeGuestName {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+
+    font-weight: 600;
+}
+
+
+.letter > span:last-child {
+    font-size: 28px;
+}
+
+
+/* =========================
+   MẶT TRƯỚC PHONG BÌ
+========================= */
+
+.envelope-front {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+
+/* Tam giác trái */
+
+.envelope-front::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top:
+        110px solid transparent;
+
+    border-bottom:
+        110px solid #c5dcec;
+
+    border-right:
+        170px solid transparent;
+}
+
+
+/* Tam giác phải */
+
+.envelope-front::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top:
+        110px solid transparent;
+
+    border-bottom:
+        110px solid #bad4e7;
+
+    border-left:
+        170px solid transparent;
+}
+
+
+/* Nắp phong bì */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        170px solid transparent;
+
+    border-right:
+        170px solid transparent;
+
+    border-top:
+        120px solid #aacbe2;
+
+    z-index: 5;
+
+    transform-origin: top;
+
+    transition:
+        transform 1s ease;
+
+    backface-visibility: hidden;
+}
+
+
+/* =========================
+   KHI PHONG BÌ MỞ
+========================= */
+
+.envelope.open .envelope-flap {
+    transform:
+        rotateX(180deg);
+
+    z-index: 1;
+}
+
+
+.envelope.open .letter {
+    transform:
+        translateY(-140px);
+}
+
+
+/* Thiệp bay lên */
+
+.envelope.finish .letter {
+    transform:
+        translateY(-140px)
+        scale(2);
+
+    opacity: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #invitationPage {
+        padding: 40px 12px;
+    }
+
+
+    /* Graduation */
+
+    .graduation-script {
+        font-size: 58px;
+    }
+
+
+    /* invitation. */
+
+    .graduation-serif {
+        font-size: 43px;
+
+        margin-top: -3px;
+    }
+
+
+    .sub-title {
+        font-size: 14px;
+
+        letter-spacing: 4px;
+
+        margin-top: 22px;
+    }
+
+
+    .graduate-name {
+        font-size: 46px;
+    }
+
+
+    .invite-sentence {
+        font-size: 24px;
+    }
+
+
+    #guestRole,
+    #guestName,
+    #hostRole {
+        font-size: 24px;
+    }
+
+
+    .thank-you {
+        font-size: 18px;
+    }
+
+
+    .signature {
+        font-size: 27px;
+    }
+
+
+    .event-info {
+        padding: 22px 15px;
+    }
+
+
+    .event-item {
+        gap: 6px;
+    }
+
+
+    .event-label,
+    .event-text strong,
+    .map-link {
+        font-size: 16px;
+    }
+
+
+    .event-icon {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       TRANG TRÍ MOBILE
+    ========================= */
+
+    .decor-cap {
+        width: 70px;
+
+        opacity: 0.62;
+    }
+
+    .decor-cap-top {
+        right: 5%;
+        top: 2%;
+    }
+
+    .decor-cap-bottom {
+        left: 4%;
+        bottom: 2%;
+    }
+
+
+    .decor-bouquet {
+        width: 145px;
+
+        opacity: 0.66;
+    }
+
+    .decor-bouquet-left {
+        left: -65px;
+        bottom: -18px;
+    }
+
+    .decor-bouquet-right {
+        right: -70px;
+        top: 3%;
+    }
+
+    .decor-bouquet-small {
+        display: none;
+    }
+
+
+    .decor-ribbon {
+        width: 230px;
+
+        opacity: 0.42;
+    }
+
+    .decor-ribbon-top {
+        left: -80px;
+        top: 7%;
+    }
+
+    .decor-ribbon-bottom {
+        right: -95px;
+        bottom: 8%;
+    }
+
+    .decor-ribbon-knot {
+        width: 72px;
+
+        left: 2%;
+        top: 30%;
+
+        opacity: 0.55;
+    }
+
+
+    /* =========================
+       PHONG BÌ MOBILE
+    ========================= */
+
+    .envelope {
+        width: 290px;
+        height: 190px;
+    }
+
+
+    .envelope-front::before {
+        border-top-width: 95px;
+        border-bottom-width: 95px;
+        border-right-width: 145px;
+    }
+
+
+    .envelope-front::after {
+        border-top-width: 95px;
+        border-bottom-width: 95px;
+        border-left-width: 145px;
+    }
+
+
+    .envelope-flap {
+        border-left-width: 145px;
+        border-right-width: 145px;
+        border-top-width: 105px;
+    }
+
+
+    .letter {
+        height: 165px;
+    }
+
+
+    .letter p {
+        font-size: 29px;
+    }
+
+
+    .letter strong,
+    #envelopeGuestRole,
+    #envelopeGuestName {
+        font-size: 22px;
+    }
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* =========================================================
+   TRANG TRÍ THIỆP
+========================================================= */
+
+#invitationPage {
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+}
+
+#invitationPage::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(73, 135, 175, 0.24);
+    border-radius: 26px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.invitation-container {
+    position: relative;
+    z-index: 5;
+}
+
+.party-decoration {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================
+   BÓNG BAY
+========================= */
+
+.party-balloon {
+    position: absolute;
+    width: clamp(86px, 8vw, 135px);
+    aspect-ratio: 0.82;
+    border-radius: 52% 48% 48% 52% / 46% 46% 54% 54%;
+    opacity: 0.92;
+    filter: drop-shadow(0 10px 14px rgba(34, 82, 112, 0.13));
+}
+
+.party-balloon::before {
+    content: "";
+    position: absolute;
+    width: 28%;
+    height: 36%;
+    top: 12%;
+    left: 16%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(20deg);
+}
+
+.party-balloon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 13px;
+    height: 13px;
+    transform: translateX(-50%) rotate(45deg);
+    background: inherit;
+    border-radius: 2px;
+}
+
+.balloon-blue {
+    background:
+        radial-gradient(circle at 30% 23%, rgba(255, 255, 255, 0.32), transparent 30%),
+        linear-gradient(145deg, #8fd5f1, #3f8fbd);
+}
+
+.balloon-light {
+    background:
+        radial-gradient(circle at 30% 23%, rgba(255, 255, 255, 0.4), transparent 30%),
+        linear-gradient(145deg, #caeef5, #75bfd3);
+}
+
+.balloon-gold {
+    background:
+        radial-gradient(circle at 30% 23%, rgba(255, 255, 255, 0.42), transparent 30%),
+        linear-gradient(145deg, #ffe48a, #e8a73e);
+}
+
+/* Trái trên */
+.balloon-tl-a { top: -28px; left: -25px; transform: rotate(-13deg); }
+.balloon-tl-b { top: -65px; left: 70px; transform: rotate(8deg) scale(0.95); }
+.balloon-tl-c { top: 62px; left: -56px; transform: rotate(-8deg) scale(0.88); }
+
+/* Phải trên */
+.balloon-tr-a { top: -60px; right: -10px; transform: rotate(-8deg); }
+.balloon-tr-b { top: 52px; right: -52px; transform: rotate(10deg) scale(0.9); }
+.balloon-tr-c { top: -66px; right: 82px; transform: rotate(7deg) scale(0.88); }
+
+/* Trái dưới */
+.balloon-bl-a { bottom: -35px; left: -25px; transform: rotate(12deg); }
+.balloon-bl-b { bottom: -67px; left: 75px; transform: rotate(8deg) scale(0.95); }
+.balloon-bl-c { bottom: 64px; left: -55px; transform: rotate(-10deg) scale(0.87); }
+
+/* Phải dưới */
+.balloon-br-a { bottom: -62px; right: 73px; transform: rotate(-8deg) scale(0.95); }
+.balloon-br-b { bottom: -35px; right: -26px; transform: rotate(-12deg); }
+.balloon-br-c { bottom: 64px; right: -55px; transform: rotate(9deg) scale(0.87); }
+
+
+/* =========================
+   MŨ TỐT NGHIỆP
+========================= */
+
+.party-cap {
+    position: absolute;
+    width: clamp(92px, 8vw, 140px);
+    z-index: 3;
+    filter: drop-shadow(0 9px 12px rgba(0, 0, 0, 0.15));
+}
+
+.party-cap-tl { top: 2.5%; left: 2.5%; transform: rotate(-14deg); }
+.party-cap-tr { top: 3%; right: 2.5%; transform: rotate(14deg); }
+.party-cap-bl { bottom: 2.5%; left: 3%; transform: rotate(12deg); }
+.party-cap-br { bottom: 2.5%; right: 3%; transform: rotate(-12deg); }
+
+
+/* =========================
+   LỚP NỘI DUNG THIỆP
+========================= */
+
+.graduation-heading,
+.sub-title,
+.graduate-name,
+.divider,
+.invite-text,
+.event-info,
+.thank-you,
+.signature {
+    position: relative;
+    z-index: 6;
+}
+
+
+/* =========================================================
+   CONFETTI DÙNG CHUNG
+   Dùng cho cả login và thiệp chính
+========================================================= */
+
+.login-confetti-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Nâng form và decoration login lên trên confetti */
+.login-box {
+    z-index: 4;
+}
+
+.welcome-decoration {
+    z-index: 3;
+}
+
+.falling-confetti {
+    position: absolute;
+    left: var(--x);
+    top: -12vh;
+    width: var(--w);
+    height: var(--h);
+    background: var(--color);
+    border-radius: 2px;
+    opacity: 0;
+    z-index: 2;
+    will-change: transform, opacity;
+    animation:
+        confettiFall
+        var(--duration)
+        linear
+        var(--delay)
+        infinite;
+}
+
+.confetti-dot {
+    border-radius: 50%;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translate3d(0, -12vh, 0) rotate(var(--rotate-start));
+        opacity: 0;
+    }
+
+    8% {
+        opacity: var(--opacity);
+    }
+
+    25% {
+        transform:
+            translate3d(calc(var(--drift) * 0.35), 25vh, 0)
+            rotate(calc(var(--rotate-start) + 120deg));
+    }
+
+    50% {
+        transform:
+            translate3d(calc(var(--drift) * -0.20), 55vh, 0)
+            rotate(calc(var(--rotate-start) + 300deg));
+    }
+
+    75% {
+        transform:
+            translate3d(calc(var(--drift) * 0.65), 85vh, 0)
+            rotate(calc(var(--rotate-start) + 520deg));
+        opacity: var(--opacity);
+    }
+
+    100% {
+        transform:
+            translate3d(var(--drift), 120vh, 0)
+            rotate(var(--rotate-end));
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #invitationPage::before {
+        inset: 7px;
+        border-radius: 18px;
+    }
+
+    .party-balloon {
+        width: 66px;
+        opacity: 0.75;
+    }
+
+    /* Giảm số bóng để không che nội dung */
+    .balloon-tl-b,
+    .balloon-tr-c,
+    .balloon-bl-b,
+    .balloon-br-a {
+        display: none;
+    }
+
+    .party-cap {
+        width: 58px;
+        opacity: 0.88;
+    }
+
+    .party-cap-tl { top: 1.2%; left: 2%; }
+    .party-cap-tr { top: 1.5%; right: 2%; }
+    .party-cap-bl { bottom: 1%; left: 2%; }
+    .party-cap-br { bottom: 1%; right: 2%; }
+
+    .falling-confetti {
+        animation-duration: calc(var(--duration) * 1.12);
+    }
+}
+
+
+/* Giảm chuyển động nếu thiết bị yêu cầu */
+@media (prefers-reduced-motion: reduce) {
+    .falling-confetti {
+        display: none;
+        animation: none;
+    }
+}
