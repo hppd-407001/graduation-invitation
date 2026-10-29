@@ -36,6 +36,7 @@ const guestList = [
             "Zân Trúc",
             "TVVT",
             "ZT",
+            "VT",
             "Trúc"
         ]
     },
